@@ -83,10 +83,27 @@ class ChatPage extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const CircleAvatar(
-                    radius: 32,
-                    backgroundColor: AppColors.lightBlueColor,
-                    child: Icon(
+                  Container(
+                    height: 64,
+                    width: 64,
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(32)),
+                      color: AppColors.whiteColor,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                          Colors.brown.shade400,
+                          AppColors.beigeColor,
+                          AppColors.lightBlueColor,
+                          Colors.lightBlue.shade300,
+                          AppColors.purpleColor,
+                          AppColors.beigeColor,
+                        ],
+                        stops: const [0.08, 0.15, 0.4, 0.5, 0.6, 1.0],
+                      ),
+                    ),
+                    child: const Icon(
                       CupertinoIcons.add,
                       color: AppColors.blackColor,
                     ),
@@ -180,10 +197,23 @@ class ChatPage extends StatelessWidget {
                         Container(
                           height: 44,
                           width: 120,
-                          decoration: const BoxDecoration(
-                              color: AppColors.beigeColor,
+                          decoration: BoxDecoration(
+                              color: AppColors.whiteColor,
+                              gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Colors.brown.shade400,
+                                  AppColors.beigeColor,
+                                  AppColors.lightBlueColor,
+                                  Colors.lightBlue.shade300,
+                                  AppColors.purpleColor,
+                                  AppColors.beigeColor,
+                                ],
+                                stops: const [0.08, 0.15, 0.4, 0.5, 0.6, 1.0],
+                              ),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(24))),
+                                  const BorderRadius.all(Radius.circular(24))),
                           child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

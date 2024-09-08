@@ -72,7 +72,10 @@ class TaskPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(width: width * 0.09),
-                const LargeCircularProgressBar(value: 0.7),
+                const LargeCircularProgressBar(
+                  value: 0.7,
+                  // color: Colors.transparent,
+                ),
                 SizedBox(width: width * 0.04),
                 const Text(
                   '''Task 
@@ -130,6 +133,19 @@ Completed''',
                   width: 52,
                   decoration: BoxDecoration(
                       color: AppColors.whiteColor,
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.brown.shade400,
+                          AppColors.beigeColor,
+                          AppColors.lightBlueColor,
+                          Colors.lightBlue.shade300,
+                          AppColors.purpleColor,
+                          AppColors.beigeColor,
+                        ],
+                        stops: const [0.08, 0.15, 0.4, 0.5, 0.6, 1.0],
+                      ),
                       borderRadius: BorderRadius.circular(25)),
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -402,8 +418,8 @@ Completed''',
                           ),
                           Positioned(
                               top: 1,
-                              left: 100,
-                              right: 100,
+                              left: 140,
+                              right: 140,
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.push(
@@ -412,10 +428,34 @@ Completed''',
                                           builder: (context) =>
                                               const ChatPage()));
                                 },
-                                child: const CircleAvatar(
-                                  radius: 30,
-                                  backgroundColor: AppColors.lightBlueColor,
-                                  child: Icon(
+                                child: Container(
+                                  height: 60,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(30)),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomLeft,
+                                      end: Alignment.centerRight,
+                                      colors: [
+                                        Colors.brown.shade400,
+                                        AppColors.beigeColor,
+                                        AppColors.lightBlueColor,
+                                        Colors.lightBlue.shade300,
+                                        AppColors.purpleColor,
+                                        AppColors.beigeColor,
+                                      ],
+                                      stops: const [
+                                        0.08,
+                                        0.15,
+                                        0.4,
+                                        0.5,
+                                        0.6,
+                                        1.0
+                                      ],
+                                    ),
+                                  ),
+                                  child: const Icon(
                                     CupertinoIcons.add,
                                     color: AppColors.blackColor,
                                   ),

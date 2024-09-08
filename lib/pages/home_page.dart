@@ -1,6 +1,5 @@
 import 'package:demo_project/consts.dart';
 import 'package:demo_project/pages/task_page.dart';
-import 'package:demo_project/widgets/left_container_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,52 +23,75 @@ class HomePage extends StatelessWidget {
               children: [
                 Stack(children: [
                   Container(
-                    height: 200,
-                    width: 120,
-                    decoration: const BoxDecoration(
+                    height: height * 0.25,
+                    width: width * 0.38,
+                    decoration: BoxDecoration(
                         color: AppColors.beigeColor,
                         borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(60),
-                            bottomRight: Radius.circular(60))),
+                            bottomLeft: Radius.circular(width * 0.19),
+                            bottomRight: Radius.circular(width * 0.19))),
                   ),
                   Positioned(
-                      top: 100,
-                      left: 20,
-                      right: 20,
-                      bottom: 20,
+                      top: height * 0.095,
+                      left: width * 0.055,
+                      right: width * 0.055,
+                      bottom: width * 0.055,
                       child: Container(
-                        height: 80,
-                        width: 80,
-                        decoration: const BoxDecoration(
+                        height: height * 0.126,
+                        width: width * 0.28,
+                        decoration: BoxDecoration(
                             color: AppColors.blackColor,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(40))),
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(width * 0.14))),
                       )),
                 ]),
                 const SizedBox(width: 10),
-                LeftContainerWidget(
-                  color: AppColors.beigeColor,
-                  width: width * 0.6,
+                Expanded(
+                  child: Container(
+                    width: double.infinity,
+                    height: height * 0.166,
+                    decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.bottomLeft,
+                          end: Alignment.centerRight,
+                          colors: [
+                            AppColors.beigeColor,
+                            AppColors.lightBlueColor,
+                            Colors.lightBlue,
+                            AppColors.purpleColor,
+                          ],
+                          stops: [0.165, 0.4, 0.7, 2.5],
+                        ),
+                        color: AppColors.whiteColor,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(height * 0.83),
+                            topLeft: Radius.circular(height * 0.83))),
+                  ),
                 )
               ],
             ),
           ),
           const SizedBox(height: 20),
           Container(
-            width: 300,
-            height: 120,
-            decoration: const BoxDecoration(
+            width: width * 0.8,
+            height: height * 0.166,
+            decoration: BoxDecoration(
                 color: AppColors.whiteColor,
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(60),
-                    topRight: Radius.circular(60))),
+                    bottomRight: Radius.circular(height * 0.83),
+                    topRight: Radius.circular(height * 0.83))),
           ),
           const SizedBox(height: 20),
           Padding(
             padding: EdgeInsets.only(left: width * 0.19),
-            child: LeftContainerWidget(
-              color: AppColors.greyColor,
-              width: width * 0.83,
+            child: Container(
+              width: double.infinity,
+              height: height * 0.166,
+              decoration: BoxDecoration(
+                  color: AppColors.greyColor,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(height * 0.83),
+                      topLeft: Radius.circular(height * 0.83))),
             ),
           ),
           const SizedBox(height: 40),
@@ -83,35 +105,55 @@ Work
             ''',
               style: TextStyle(
                   color: AppColors.whiteColor,
-                  fontSize: height * 0.04,
+                  fontSize: height * 0.041,
                   fontWeight: FontWeight.bold),
             ),
           ),
         ],
       ),
       floatingActionButton: Padding(
-        padding: EdgeInsets.only(left: width * 0.65, right: width * 0.05),
-        child: TextButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const TaskPage()));
-            },
-            style: const ButtonStyle(
-                minimumSize: WidgetStatePropertyAll<Size>(Size(120, 50)),
-                backgroundColor:
-                    WidgetStatePropertyAll<Color>(AppColors.beigeColor)),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Start',
-                  style: TextStyle(color: AppColors.blackColor, fontSize: 16),
-                ),
-                SizedBox(width: 8),
-                Icon(CupertinoIcons.arrow_right,
-                    size: 18, color: AppColors.blackColor)
-              ],
-            )),
+        padding: EdgeInsets.only(left: width * 0.65, right: width * 0.07),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const TaskPage()));
+          },
+          child: Container(
+              height: height * 0.054,
+              width: width * 0.25,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Colors.brown.shade400,
+                      AppColors.beigeColor,
+                      AppColors.lightBlueColor,
+                      Colors.lightBlue.shade300,
+                      AppColors.purpleColor,
+                      AppColors.beigeColor,
+                    ],
+                    stops: const [0.08, 0.15, 0.4, 0.5, 0.6, 1.0],
+                  ),
+                  color: AppColors.whiteColor,
+                  borderRadius:
+                      BorderRadius.all(Radius.circular(height * 0.027))),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Start',
+                    style: TextStyle(
+                        color: AppColors.blackColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(width: 8),
+                  Icon(CupertinoIcons.arrow_right,
+                      size: 18, color: AppColors.blackColor)
+                ],
+              )),
+        ),
       ),
     );
   }

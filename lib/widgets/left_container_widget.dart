@@ -1,10 +1,20 @@
+import 'package:demo_project/consts.dart';
 import 'package:flutter/material.dart';
 
 class LeftContainerWidget extends StatelessWidget {
   final Color color;
   final double width;
-  const LeftContainerWidget(
-      {super.key, required this.color, required this.width});
+  final Gradient gradient;
+
+  const LeftContainerWidget({
+    super.key,
+    required this.color,
+    required this.width,
+    this.gradient = const LinearGradient(colors: [
+      AppColors.whiteColor,
+      AppColors.beigeColor,
+    ]),
+  });
 
   @override
   Widget build(BuildContext context) {
