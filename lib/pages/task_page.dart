@@ -3,6 +3,7 @@ import 'package:demo_project/widgets/circular_progress.dart';
 import 'package:demo_project/widgets/date_widget.dart';
 import 'package:demo_project/widgets/half_date_widget.dart';
 import 'package:demo_project/widgets/large_circular_progress_bar.dart';
+import 'package:demo_project/widgets/profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -175,8 +176,7 @@ Completed''',
                         topRight: Radius.circular(35),
                         topLeft: Radius.circular(35))),
                 child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 40.0, right: 20, top: 30),
+                  padding: const EdgeInsets.only(left: 40.0, top: 30),
                   child: Column(
                     children: [
                       Row(
@@ -269,29 +269,23 @@ Completed''',
                               ),
                             ],
                           ),
-                          SizedBox(width: width * 0.02),
-                          CircleAvatar(
-                            radius: 10,
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/chat.png',
-                              ),
-                            ),
-                          ),
-                          CircleAvatar(
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/matt.png',
-                              ),
-                            ),
-                          ),
-                          CircleAvatar(
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/julie.png',
-                              ),
-                            ),
-                          ),
+                          SizedBox(width: width * 0.029),
+                          const Stack(
+                            children: [
+                              ProfileAvatar(name: 'Chad'),
+                              SizedBox(width: 115),
+                              Positioned(
+                                  top: 0,
+                                  bottom: 0,
+                                  left: 26,
+                                  child: ProfileAvatar(name: 'Matt')),
+                              Positioned(
+                                  top: 0,
+                                  bottom: 0,
+                                  left: 52,
+                                  child: ProfileAvatar(name: 'Julie')),
+                            ],
+                          )
                         ],
                       ),
                       SizedBox(height: height * 0.018),
@@ -322,21 +316,17 @@ Completed''',
                             ],
                           ),
                           SizedBox(width: width * 0.06),
-                          CircleAvatar(
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/matt.png',
-                              ),
-                            ),
-                          ),
-                          CircleAvatar(
-                            child: ClipOval(
-                              child: Image.asset(
-                                alignment: Alignment.center,
-                                'assets/jung.png',
-                              ),
-                            ),
-                          ),
+                          const Stack(
+                            children: [
+                              ProfileAvatar(name: 'Chad'),
+                              SizedBox(width: 115),
+                              Positioned(
+                                  top: 0,
+                                  bottom: 0,
+                                  left: 26,
+                                  child: ProfileAvatar(name: 'yuri_lan')),
+                            ],
+                          )
                         ],
                       ),
                       SizedBox(height: height * 0.018),
@@ -367,21 +357,17 @@ Completed''',
                             ],
                           ),
                           SizedBox(width: width * 0.06),
-                          CircleAvatar(
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/erica.png',
-                              ),
-                            ),
-                          ),
-                          CircleAvatar(
-                            child: ClipOval(
-                              child: Image.asset(
-                                alignment: Alignment.center,
-                                'assets/julie.png',
-                              ),
-                            ),
-                          ),
+                          const Stack(
+                            children: [
+                              ProfileAvatar(name: 'jung_t'),
+                              SizedBox(width: 115),
+                              Positioned(
+                                  top: 0,
+                                  bottom: 0,
+                                  left: 26,
+                                  child: ProfileAvatar(name: 'erica_y')),
+                            ],
+                          )
                         ],
                       ),
                       Stack(

@@ -10,11 +10,11 @@ class LeftContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 100,
+      height: 120,
       decoration: BoxDecoration(
           color: color,
           borderRadius: const BorderRadius.only(
-              bottomLeft: Radius.circular(50), topLeft: Radius.circular(50))),
+              bottomLeft: Radius.circular(60), topLeft: Radius.circular(60))),
     );
   }
 }

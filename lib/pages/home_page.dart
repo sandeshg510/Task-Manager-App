@@ -20,47 +20,49 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Stack(children: [
                   Container(
                     height: 200,
-                    width: 100,
+                    width: 120,
                     decoration: const BoxDecoration(
                         color: AppColors.beigeColor,
                         borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(50))),
+                            bottomLeft: Radius.circular(60),
+                            bottomRight: Radius.circular(60))),
                   ),
                   Positioned(
-                      top: 110,
-                      left: 15,
-                      right: 15,
+                      top: 100,
+                      left: 20,
+                      right: 20,
+                      bottom: 20,
                       child: Container(
-                        height: 70,
-                        width: 50,
+                        height: 80,
+                        width: 80,
                         decoration: const BoxDecoration(
                             color: AppColors.blackColor,
                             borderRadius:
-                                BorderRadius.all(Radius.circular(35))),
+                                BorderRadius.all(Radius.circular(40))),
                       )),
                 ]),
-                const SizedBox(width: 20),
+                const SizedBox(width: 10),
                 LeftContainerWidget(
                   color: AppColors.beigeColor,
-                  width: width * 0.63,
+                  width: width * 0.6,
                 )
               ],
             ),
           ),
           const SizedBox(height: 20),
           Container(
-            width: 243,
-            height: 100,
+            width: 300,
+            height: 120,
             decoration: const BoxDecoration(
                 color: AppColors.whiteColor,
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(50),
-                    topRight: Radius.circular(50))),
+                    bottomRight: Radius.circular(60),
+                    topRight: Radius.circular(60))),
           ),
           const SizedBox(height: 20),
           Padding(
