@@ -1,6 +1,6 @@
 # Task Manager app UI
 
-apk link : https://drive.google.com/file/d/1X-StmWPKYMPwGS3KhFw5Cif_oWVa_LAx/view?usp=drive_link 
+Download apk : https://drive.google.com/file/d/1X-StmWPKYMPwGS3KhFw5Cif_oWVa_LAx/view?usp=drive_link 
 
 Three complex and beautiful UI's have been created here. 
 
