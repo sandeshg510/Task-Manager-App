@@ -391,35 +391,34 @@ Completed''',
                           Row(
                             children: [
                               SizedBox(height: height * 0.116),
-                              Icon(
+                              const Icon(
                                 Icons.home_filled,
-                                size: 32,
-                                color: Theme.of(context).colorScheme.primary,
+                                size: 28,
+                                color: AppColors.lightBlueColor,
                               ),
-                              SizedBox(width: height * 0.04),
-                              Icon(
-                                size: 32,
-                                Icons.insert_chart,
-                                color: Theme.of(context).colorScheme.primary,
-                              ),
-                              SizedBox(width: height * 0.16),
-                              Icon(
-                                size: 32,
+                              SizedBox(width: height * 0.05),
+                              const Icon(
+                                  size: 28,
+                                  Icons.insert_chart,
+                                  color: Colors.grey),
+                              SizedBox(width: height * 0.17),
+                              const Icon(
+                                size: 28,
                                 Icons.notification_important_rounded,
-                                color: Theme.of(context).colorScheme.primary,
+                                color: Colors.grey,
                               ),
-                              SizedBox(width: height * 0.04),
-                              Icon(
-                                size: 32,
+                              SizedBox(width: height * 0.038),
+                              const Icon(
+                                size: 28,
                                 Icons.settings,
-                                color: Theme.of(context).colorScheme.primary,
+                                color: Colors.grey,
                               ),
                             ],
                           ),
                           Positioned(
                               top: 1,
-                              left: 140,
-                              right: 140,
+                              left: 135,
+                              right: 147,
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.push(

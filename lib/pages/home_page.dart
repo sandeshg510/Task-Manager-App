@@ -96,19 +96,68 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 40),
           Padding(
-            padding: EdgeInsets.only(left: width * 0.15),
-            child: Text(
-              '''Create Your 
-Tasks And 
-Manage Your
-Work
-            ''',
-              style: TextStyle(
-                  color: AppColors.whiteColor,
-                  fontSize: height * 0.041,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
+              padding: EdgeInsets.only(left: width * 0.15),
+              child: RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Create Your',
+                      style: TextStyle(
+                          color: AppColors.whiteColor,
+                          fontSize: height * 0.041,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Grotesk'),
+                    ),
+                    TextSpan(
+                      text: '\nTasks ',
+                      style: TextStyle(
+                          fontSize: height * 0.041,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Grotesk',
+                          foreground: Paint()
+                            ..shader = LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Colors.brown.shade400,
+                                AppColors.beigeColor,
+                                AppColors.lightBlueColor,
+                                Colors.lightBlue.shade300,
+                                AppColors.purpleColor,
+                                AppColors.beigeColor,
+                              ],
+                              stops: const [0.08, 0.15, 0.4, 0.5, 0.6, 1.0],
+                            ).createShader(
+                                const Rect.fromLTRB(0, 0, 150, 150))),
+                    ),
+                    TextSpan(
+                      text: 'And',
+                      style: TextStyle(
+                          color: AppColors.whiteColor,
+                          fontSize: height * 0.041,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Grotesk'),
+                    ),
+                    TextSpan(
+                      text: '\nManage Your',
+                      style: TextStyle(
+                          color: AppColors.whiteColor,
+                          fontSize: height * 0.041,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Grotesk'),
+                    ),
+                    TextSpan(
+                      text: '\nWork.',
+                      style: TextStyle(
+                          color: AppColors.whiteColor,
+                          fontSize: height * 0.041,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Grotesk'),
+                    ),
+                  ],
+                ),
+                maxLines: 4, // Set the maximum number of lines
+              )),
         ],
       ),
       floatingActionButton: Padding(
