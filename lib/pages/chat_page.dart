@@ -1,4 +1,5 @@
 import 'package:demo_project/widgets/online_user_widget.dart';
+import 'package:demo_project/widgets/recent_chat_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -79,10 +80,10 @@ class ChatPage extends StatelessWidget {
           Row(
             children: [
               SizedBox(width: width * 0.08),
-              const Column(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 32,
                     backgroundColor: AppColors.lightBlueColor,
                     child: Icon(
@@ -91,13 +92,23 @@ class ChatPage extends StatelessWidget {
                     ),
                   ),
                   // SizedBox(height: height * 0.006),
-                  Text(
-                    'Add',
-                    style: TextStyle(color: Colors.black38, fontSize: 12),
-                  ),
-                  Text(
-                    'Chat',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  RichText(
+                    text: const TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: ' Add',
+                            style: TextStyle(
+                                color: Colors.black38,
+                                fontSize: 11,
+                                fontFamily: 'Grotesk')),
+                        TextSpan(
+                            text: '\nChat',
+                            style: TextStyle(
+                                color: AppColors.blackColor,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Grotesk')),
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -194,159 +205,31 @@ class ChatPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: height * 0.022),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 27,
-                          child: ClipOval(
-                            child: Image.asset(
-                              'assets/Chat Boldwick.png',
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: width * 0.05),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Chat Boldwick',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.whiteColor),
-                            ),
-                            Text(
-                              'Sending the file right now',
-                              style: TextStyle(
-                                  fontSize: 12, color: Colors.white38),
-                            )
-                          ],
-                        ),
-                      ],
+                    const RecentChatDetails(
+                      name: 'Chat Boldwick',
+                      lastConverse: 'Sending the file right now',
                     ),
                     SizedBox(height: height * 0.025),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 27,
-                          child: ClipOval(
-                            child: Image.asset(
-                              'assets/Chat Boldwick.png',
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: width * 0.05),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Chat Boldwick',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.whiteColor),
-                            ),
-                            Text(
-                              'Sending the file right now',
-                              style: TextStyle(
-                                  fontSize: 12, color: Colors.white38),
-                            )
-                          ],
-                        ),
-                      ],
+                    const RecentChatDetails(
+                      name: 'Yuri Lorental',
+                      lastConverse: 'can you confirm deadline?',
                     ),
                     SizedBox(height: height * 0.025),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 27,
-                          child: ClipOval(
-                            child: Image.asset(
-                              'assets/Chat Boldwick.png',
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: width * 0.05),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Chat Boldwick',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.whiteColor),
-                            ),
-                            Text(
-                              'Sending the file right now',
-                              style: TextStyle(
-                                  fontSize: 12, color: Colors.white38),
-                            )
-                          ],
-                        ),
-                      ],
+                    const RecentChatDetails(
+                      name: 'Julie Woodland',
+                      lastConverse: 'I haven\'t completed the work',
+                      messageReceived: true,
                     ),
                     SizedBox(height: height * 0.025),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 27,
-                          child: ClipOval(
-                            child: Image.asset(
-                              'assets/Chat Boldwick.png',
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: width * 0.05),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Chat Boldwick',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.whiteColor),
-                            ),
-                            Text(
-                              'Sending the file right now',
-                              style: TextStyle(
-                                  fontSize: 12, color: Colors.white38),
-                            )
-                          ],
-                        ),
-                      ],
+                    const RecentChatDetails(
+                      name: 'Erica Yaeger',
+                      lastConverse: 'voice message (0.23)',
                     ),
                     SizedBox(height: height * 0.025),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 27,
-                          child: ClipOval(
-                            child: Image.asset(
-                              'assets/Chat Boldwick.png',
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: width * 0.05),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Chat Boldwick',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.whiteColor),
-                            ),
-                            Text(
-                              'Sending the file right now',
-                              style: TextStyle(
-                                  fontSize: 12, color: Colors.white38),
-                            )
-                          ],
-                        ),
-                      ],
+                    const RecentChatDetails(
+                      name: 'Jung Taekwoon',
+                      lastConverse: 'Hello! How is the progress?',
+                      messageReceived: true,
                     ),
                   ],
                 ),
