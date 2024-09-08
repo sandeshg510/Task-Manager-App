@@ -18,7 +18,10 @@ class DateWidget extends StatelessWidget {
         children: [
           Text(
             date,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: AppColors.whiteColor),
           ),
           Text(
             weekDay,

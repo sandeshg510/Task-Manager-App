@@ -6,6 +6,8 @@ import 'package:demo_project/widgets/large_circular_progress_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'chat_page.dart';
+
 class TaskPage extends StatelessWidget {
   const TaskPage({super.key});
 
@@ -27,7 +29,6 @@ class TaskPage extends StatelessWidget {
                   child: ClipOval(
                     child: Image.asset(
                       'assets/user1.png',
-                      // fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -37,12 +38,15 @@ class TaskPage extends StatelessWidget {
                   children: [
                     Text(
                       'Welcome Jamie!',
-                      style: TextStyle(fontSize: 13),
+                      style:
+                          TextStyle(fontSize: 13, color: AppColors.whiteColor),
                     ),
                     Text(
                       'Explore Tasks',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.whiteColor),
                     ),
                   ],
                 ),
@@ -56,7 +60,8 @@ class TaskPage extends StatelessWidget {
                     decoration: const BoxDecoration(
                         color: AppColors.blackColor,
                         borderRadius: BorderRadius.all(Radius.circular(24))),
-                    child: const Icon(Icons.mark_email_unread),
+                    child: const Icon(Icons.mark_email_unread,
+                        color: AppColors.whiteColor),
                   ),
                 ),
               ],
@@ -71,7 +76,10 @@ class TaskPage extends StatelessWidget {
                 const Text(
                   '''Task 
 Completed''',
-                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.whiteColor),
                 ),
                 SizedBox(width: width * 0.09),
                 Container(
@@ -261,18 +269,27 @@ Completed''',
                               ),
                             ],
                           ),
-                          SizedBox(width: width * 0.06),
+                          SizedBox(width: width * 0.02),
                           CircleAvatar(
-                            radius: 25,
-                            backgroundColor: AppColors.greyColor,
-                            child: Container(
-                              height: 48,
-                              width: 48,
-                              decoration: const BoxDecoration(
-                                  color: AppColors.blackColor,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(24))),
-                              child: const Icon(Icons.mark_email_unread),
+                            radius: 10,
+                            child: ClipOval(
+                              child: Image.asset(
+                                'assets/chat.png',
+                              ),
+                            ),
+                          ),
+                          CircleAvatar(
+                            child: ClipOval(
+                              child: Image.asset(
+                                'assets/matt.png',
+                              ),
+                            ),
+                          ),
+                          CircleAvatar(
+                            child: ClipOval(
+                              child: Image.asset(
+                                'assets/julie.png',
+                              ),
                             ),
                           ),
                         ],
@@ -306,16 +323,18 @@ Completed''',
                           ),
                           SizedBox(width: width * 0.06),
                           CircleAvatar(
-                            radius: 25,
-                            backgroundColor: AppColors.greyColor,
-                            child: Container(
-                              height: 48,
-                              width: 48,
-                              decoration: const BoxDecoration(
-                                  color: AppColors.blackColor,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(24))),
-                              child: const Icon(Icons.mark_email_unread),
+                            child: ClipOval(
+                              child: Image.asset(
+                                'assets/matt.png',
+                              ),
+                            ),
+                          ),
+                          CircleAvatar(
+                            child: ClipOval(
+                              child: Image.asset(
+                                alignment: Alignment.center,
+                                'assets/jung.png',
+                              ),
                             ),
                           ),
                         ],
@@ -349,16 +368,18 @@ Completed''',
                           ),
                           SizedBox(width: width * 0.06),
                           CircleAvatar(
-                            radius: 25,
-                            backgroundColor: AppColors.greyColor,
-                            child: Container(
-                              height: 48,
-                              width: 48,
-                              decoration: const BoxDecoration(
-                                  color: AppColors.blackColor,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(24))),
-                              child: const Icon(Icons.mark_email_unread),
+                            child: ClipOval(
+                              child: Image.asset(
+                                'assets/erica.png',
+                              ),
+                            ),
+                          ),
+                          CircleAvatar(
+                            child: ClipOval(
+                              child: Image.asset(
+                                alignment: Alignment.center,
+                                'assets/julie.png',
+                              ),
                             ),
                           ),
                         ],
@@ -393,16 +414,25 @@ Completed''',
                               ),
                             ],
                           ),
-                          const Positioned(
+                          Positioned(
                               top: 1,
                               left: 100,
                               right: 100,
-                              child: CircleAvatar(
-                                radius: 30,
-                                backgroundColor: AppColors.lightBlueColor,
-                                child: Icon(
-                                  CupertinoIcons.add,
-                                  color: AppColors.blackColor,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ChatPage()));
+                                },
+                                child: const CircleAvatar(
+                                  radius: 30,
+                                  backgroundColor: AppColors.lightBlueColor,
+                                  child: Icon(
+                                    CupertinoIcons.add,
+                                    color: AppColors.blackColor,
+                                  ),
                                 ),
                               ))
                         ],

@@ -80,7 +80,9 @@ Manage Your
 Work
             ''',
               style: TextStyle(
-                  fontSize: height * 0.04, fontWeight: FontWeight.w600),
+                  color: AppColors.whiteColor,
+                  fontSize: height * 0.04,
+                  fontWeight: FontWeight.bold),
             ),
           ),
         ],
@@ -93,13 +95,19 @@ Work
                   MaterialPageRoute(builder: (context) => const TaskPage()));
             },
             style: const ButtonStyle(
+                minimumSize: WidgetStatePropertyAll<Size>(Size(120, 50)),
                 backgroundColor:
                     WidgetStatePropertyAll<Color>(AppColors.beigeColor)),
             child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Start'),
-                SizedBox(width: 3),
-                Icon(CupertinoIcons.arrow_right)
+                Text(
+                  'Start',
+                  style: TextStyle(color: AppColors.blackColor, fontSize: 16),
+                ),
+                SizedBox(width: 8),
+                Icon(CupertinoIcons.arrow_right,
+                    size: 18, color: AppColors.blackColor)
               ],
             )),
       ),
