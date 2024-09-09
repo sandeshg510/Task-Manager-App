@@ -1,5 +1,8 @@
 import 'package:demo_project/consts.dart';
 import 'package:demo_project/pages/task_page.dart';
+import 'package:demo_project/widgets/dot_bar_animation.dart';
+import 'package:demo_project/widgets/graph.dart';
+import 'package:demo_project/widgets/wave_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -80,11 +83,16 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(height * 0.83),
                     topRight: Radius.circular(height * 0.83))),
+            child: const Padding(
+              padding: EdgeInsets.only(left: 20.0, bottom: 28),
+              child: Graph(),
+            ),
           ),
           const SizedBox(height: 20),
           Padding(
             padding: EdgeInsets.only(left: width * 0.19),
             child: Container(
+              alignment: AlignmentDirectional.centerEnd,
               width: double.infinity,
               height: height * 0.166,
               decoration: BoxDecoration(
@@ -92,6 +100,8 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(height * 0.83),
                       topLeft: Radius.circular(height * 0.83))),
+              child: const Padding(
+                  padding: EdgeInsets.only(left: 55), child: WaveAnimation()),
             ),
           ),
           const SizedBox(height: 40),
@@ -158,6 +168,11 @@ class HomePage extends StatelessWidget {
                 ),
                 maxLines: 4, // Set the maximum number of lines
               )),
+          const SizedBox(height: 40),
+          const Padding(
+            padding: EdgeInsets.only(left: 40.0),
+            child: DotBarAnimation(),
+          )
         ],
       ),
       floatingActionButton: Padding(

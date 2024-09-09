@@ -192,30 +192,33 @@ Completed''',
                         topRight: Radius.circular(35),
                         topLeft: Radius.circular(35))),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 40.0, top: 30),
+                  padding: const EdgeInsets.only(left: 25.0, top: 30),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Your Tasks',
-                                style: TextStyle(
-                                    color: AppColors.blackColor,
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                '(7/10) Completed',
-                                style: TextStyle(
-                                    color: Colors.black38,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                          const Padding(
+                            padding: EdgeInsets.only(left: 15.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Your Tasks',
+                                  style: TextStyle(
+                                      color: AppColors.blackColor,
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  '(7/10) Completed',
+                                  style: TextStyle(
+                                      color: Colors.black38,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(width: width * 0.09),
                           Container(
@@ -268,37 +271,63 @@ Completed''',
                             color: AppColors.purpleColor,
                           ),
                           SizedBox(width: width * 0.02),
-                          const Column(
+                          Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'Chat Application',
                                 style: TextStyle(
                                     color: AppColors.blackColor,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold),
                               ),
-                              Text(
-                                'Explore Tasks',
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
+                              SizedBox(height: height * 0.005),
+                              RichText(
+                                  text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: '●  ',
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.redAccent.shade100,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                  TextSpan(
+                                    text: 'Over due',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.redAccent.shade100,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                  const TextSpan(
+                                    text: ', Mar 13, 2022',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: AppColors.greyColor,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                ],
+                              )
+                                  // Set the maximum number of lines
+                                  ),
                             ],
                           ),
-                          SizedBox(width: width * 0.029),
+                          SizedBox(width: width * 0.014),
                           const Stack(
                             children: [
                               ProfileAvatar(name: 'Chad'),
-                              SizedBox(width: 115),
+                              SizedBox(width: 100),
                               Positioned(
                                   top: 0,
                                   bottom: 0,
-                                  left: 26,
+                                  left: 25,
                                   child: ProfileAvatar(name: 'Matt')),
                               Positioned(
                                   top: 0,
                                   bottom: 0,
-                                  left: 52,
+                                  left: 50,
                                   child: ProfileAvatar(name: 'Julie')),
                             ],
                           )
@@ -314,28 +343,54 @@ Completed''',
                             color: AppColors.beigeColor,
                           ),
                           SizedBox(width: width * 0.02),
-                          const Column(
+                          Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'NFT Website',
                                 style: TextStyle(
                                     color: AppColors.blackColor,
                                     fontSize: 16,
-                                    fontWeight: FontWeight.bold),
+                                    fontWeight: FontWeight.w600),
                               ),
-                              Text(
-                                'Explore Tasks',
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
+                              SizedBox(height: height * 0.005),
+                              RichText(
+                                  text: const TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: '●  ',
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        color: AppColors.lightYellowColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                  TextSpan(
+                                    text: 'Scheduled',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: AppColors.lightYellowColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                  TextSpan(
+                                    text: ', Mar 16, 2022',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: AppColors.greyColor,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                ],
+                              )
+                                  // Set the maximum number of lines
+                                  ),
                             ],
                           ),
                           SizedBox(width: width * 0.06),
                           const Stack(
                             children: [
                               ProfileAvatar(name: 'Chad'),
-                              SizedBox(width: 115),
+                              SizedBox(width: 80),
                               Positioned(
                                   top: 0,
                                   bottom: 0,
@@ -355,28 +410,54 @@ Completed''',
                             color: AppColors.lightBlueColor,
                           ),
                           SizedBox(width: width * 0.02),
-                          const Column(
+                          Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'NFT Website',
                                 style: TextStyle(
                                     color: AppColors.blackColor,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold),
                               ),
-                              Text(
-                                'Explore Tasks',
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
+                              SizedBox(height: height * 0.005),
+                              RichText(
+                                  text: TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: '●  ',
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.lightGreen.shade300,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                  TextSpan(
+                                    text: 'Completing',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.lightGreen.shade300,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                  const TextSpan(
+                                    text: ', Mar 16, 2022',
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        color: AppColors.greyColor,
+                                        fontFamily: 'Grotesk'),
+                                  ),
+                                ],
+                              )
+                                  // Set the maximum number of lines
+                                  ),
                             ],
                           ),
-                          SizedBox(width: width * 0.06),
+                          SizedBox(width: width * 0.04),
                           const Stack(
                             children: [
                               ProfileAvatar(name: 'jung_t'),
-                              SizedBox(width: 115),
+                              SizedBox(width: 80),
                               Positioned(
                                   top: 0,
                                   bottom: 0,
