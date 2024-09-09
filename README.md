@@ -4,9 +4,9 @@ Download apk : https://drive.google.com/file/d/1X-StmWPKYMPwGS3KhFw5Cif_oWVa_LAx
 
 Three complex and beautiful UI's have been created here. 
 
-![home_page](https://github.com/user-attachments/assets/a38f98c9-3659-4674-91fc-3cf54d0a2143)
+![home_page](https://github.com/user-attachments/assets/3d49484e-daec-4065-91cc-224dea951e4b)
 
-![task_page](https://github.com/user-attachments/assets/7768bacf-e8cc-495c-9152-a8e8efcc4203)
+![task_page](https://github.com/user-attachments/assets/edd06095-c2f7-4633-b37f-ea16148a343e)
 
-![chat_page](https://github.com/user-attachments/assets/722de70e-50c2-4ae3-ac90-e5ed00a7347b)
+![chat_page](https://github.com/user-attachments/assets/2df62458-94bc-4bde-b8c8-898f94b8b80e)
 
