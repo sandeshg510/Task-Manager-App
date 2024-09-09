@@ -1,8 +1,8 @@
 # Task Manager app UI
 
-Download apk : https://drive.google.com/file/d/1X-StmWPKYMPwGS3KhFw5Cif_oWVa_LAx/view?usp=drive_link 
+Download apk : https://drive.google.com/file/d/1IUOWTsRYO8weZjDCixiQU5hCPJaknCJq/view?usp=drive_link
 
-Three complex and beautiful UI's have been created here. 
+Three complex and beautiful UI's have been created here with animations, gradient and many more. 
 
 ![home_page](https://github.com/user-attachments/assets/3d49484e-daec-4065-91cc-224dea951e4b)
 
