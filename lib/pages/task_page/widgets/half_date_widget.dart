@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../consts.dart';
+import '../../../consts.dart';
 
 class HalfDateWidget extends StatelessWidget {
   final bool isLeftSide;
@@ -14,11 +14,11 @@ class HalfDateWidget extends StatelessWidget {
       decoration: BoxDecoration(
           color: AppColors.greyColor,
           borderRadius: isLeftSide
-              ? BorderRadius.only(
+              ? const BorderRadius.only(
                   topRight: Radius.circular(26),
                   bottomRight: Radius.circular(26),
                 )
-              : BorderRadius.only(
+              : const BorderRadius.only(
                   topLeft: Radius.circular(26),
                   bottomLeft: Radius.circular(26),
                 )),

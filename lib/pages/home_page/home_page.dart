@@ -1,8 +1,8 @@
 import 'package:demo_project/consts.dart';
-import 'package:demo_project/pages/task_page.dart';
-import 'package:demo_project/widgets/dot_bar_animation.dart';
-import 'package:demo_project/widgets/graph.dart';
-import 'package:demo_project/widgets/wave_animation.dart';
+import 'package:demo_project/pages/home_page/widgets/dot_bar_animation.dart';
+import 'package:demo_project/pages/task_page/task_page.dart';
+import 'package:demo_project/pages/home_page/widgets/graph.dart';
+import 'package:demo_project/pages/home_page/widgets/wave_animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

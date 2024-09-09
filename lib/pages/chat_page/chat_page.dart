@@ -1,9 +1,9 @@
-import 'package:demo_project/widgets/online_user_widget.dart';
-import 'package:demo_project/widgets/recent_chat_details.dart';
+import 'package:demo_project/pages/chat_page/widgets/online_user_widget.dart';
+import 'package:demo_project/pages/chat_page/widgets/recent_chat_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../consts.dart';
+import '../../consts.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({super.key});

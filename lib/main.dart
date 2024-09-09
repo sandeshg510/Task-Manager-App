@@ -1,7 +1,7 @@
-import 'package:demo_project/widgets/graph.dart';
+import 'package:demo_project/pages/home_page/widgets/graph.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
+import 'pages/home_page/home_page.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'custom_circular_progress_bar.dart';
 
 class LargeCircularProgressBar extends StatelessWidget {
@@ -15,8 +16,6 @@ class LargeCircularProgressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int valueInPercentage = (value * 100).toInt();
-
     return CustomCircularProgressBar(
       value: value,
       color: color,

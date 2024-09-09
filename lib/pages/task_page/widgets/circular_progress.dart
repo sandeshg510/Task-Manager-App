@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../consts.dart';
+import '../../../consts.dart';
 import 'custom_circular_progress_bar.dart';
 
 class CircularProgressBar extends StatelessWidget {

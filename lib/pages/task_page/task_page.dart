@@ -1,13 +1,13 @@
 import 'package:demo_project/consts.dart';
-import 'package:demo_project/widgets/circular_progress.dart';
-import 'package:demo_project/widgets/date_widget.dart';
-import 'package:demo_project/widgets/half_date_widget.dart';
-import 'package:demo_project/widgets/large_circular_progress_bar.dart';
-import 'package:demo_project/widgets/profile_avatar.dart';
+import 'package:demo_project/pages/task_page/widgets/circular_progress.dart';
+import 'package:demo_project/pages/task_page/widgets/large_circular_progress_bar.dart';
+import 'package:demo_project/pages/task_page/widgets/date_widget.dart';
+import 'package:demo_project/pages/task_page/widgets/half_date_widget.dart';
+import 'package:demo_project/pages/task_page/widgets/profile_avatar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'chat_page.dart';
+import '../chat_page/chat_page.dart';
 
 class TaskPage extends StatelessWidget {
   const TaskPage({super.key});
@@ -472,17 +472,18 @@ Completed''',
                           Row(
                             children: [
                               SizedBox(height: height * 0.116),
+                              SizedBox(width: width * 0.03),
                               const Icon(
                                 Icons.home_filled,
                                 size: 28,
-                                color: AppColors.lightBlueColor,
+                                color: AppColors.purpleColor,
                               ),
                               SizedBox(width: height * 0.05),
                               const Icon(
                                   size: 28,
                                   Icons.insert_chart,
                                   color: Colors.grey),
-                              SizedBox(width: height * 0.17),
+                              SizedBox(width: height * 0.16),
                               const Icon(
                                 size: 28,
                                 Icons.notification_important_rounded,
@@ -498,8 +499,8 @@ Completed''',
                           ),
                           Positioned(
                               top: 1,
-                              left: 135,
-                              right: 147,
+                              left: 144,
+                              right: 154,
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.push(
